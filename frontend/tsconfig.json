@@ -12,12 +12,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "baseUrl": "./",
+    "types": ["cypress"],
     "paths": {
       "@components/*": ["src/components/*"],
       "@utils/*": ["src/utils/*"],
       "@types/*": ["src/types/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "cypress/**/*"],
   "exclude": ["node_modules", "dist", "build"]
 }

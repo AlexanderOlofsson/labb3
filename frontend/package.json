@@ -36,11 +36,19 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.14",
+    "@types/cypress": "^1.1.6",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
     "@types/testing-library__react": "^10.2.0",
+    "cypress": "^13.16.1",
+    "eslint": "^9.16.0",
+    "eslint-plugin-cypress": "^4.1.0",
     "jest": "^27.5.1",
     "web-vitals": "^4.2.4"
-  }
+  },
+  "description": "Plan is decided. I will learn how to use three js to make a product that is customizable.",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
