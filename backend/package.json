@@ -1,10 +1,11 @@
 {
   "name": "backend",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --require tsx \"src/test/**/*.test.ts\"",
     "start": "node dist/index.js",
     "dev": "nodemon --exec ts-node src/index.ts"
   },
@@ -17,11 +18,16 @@
     "express": "^4.21.2"
   },
   "devDependencies": {
+    "@types/chai": "^5.0.1",
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
+    "@types/mocha": "^10.0.10",
     "@types/node": "^22.10.1",
+    "chai": "^5.1.2",
+    "mocha": "^11.0.1",
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
 }
