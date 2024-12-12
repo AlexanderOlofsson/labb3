@@ -1,3 +1,3 @@
 export function calculateTotalPrice(customizations: { price: number }[]): number {
-  return 0;
+  return customizations.reduce((total, customization) => total + customization.price, 0);
 }
