@@ -12,13 +12,13 @@
     "isolatedModules": true,
     "noEmit": true,
     "baseUrl": "./",
-    "types": ["cypress"],
+    "types": ["@testing-library/jest-dom", "jest", "node"],
     "paths": {
       "@components/*": ["src/components/*"],
       "@utils/*": ["src/utils/*"],
       "@types/*": ["src/types/*"]
     }
   },
-  "include": ["src/**/*", "cypress/**/*"],
+  "include": ["src/**/*", "cypress/**/*", "src/types/**/*", "src/App.test.tsx", "cypress"],
   "exclude": ["node_modules", "dist", "build"]
 }
