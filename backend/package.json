@@ -6,16 +6,18 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --require tsx \"src/test/**/*.test.ts\"",
-    "start": "node dist/index.js",
-    "dev": "nodemon --exec ts-node src/index.ts"
+    "start": "node --loader ts-node/esm src/index.ts",
+    "dev": "nodemon --watch src --watch .env --exec \"node --loader ts-node/esm\" src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/dotenv": "^8.2.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
   },
   "devDependencies": {
     "@types/chai": "^5.0.1",
@@ -23,6 +25,7 @@
     "@types/express": "^5.0.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.10.1",
+    "@types/pg": "^8.11.10",
     "chai": "^5.1.2",
     "mocha": "^11.0.1",
     "nodemon": "^3.1.7",

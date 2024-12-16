@@ -1,41 +1,24 @@
 import express from "express";
 import cors from "cors";
-// import dotenv from "dotenv";
+import dotenv from "dotenv";
+import pkg from "pg";
+import productRoutes from "./routes/productRoutes.ts";
 
-// dotenv.config();
+dotenv.config();
+
+const { Pool } = pkg;
 
 const app = express();
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+});
 
 app.use(cors());
 app.use(express.json());
 
-const sofa = { id: 1, name: "Sofa", base_color: "#ffffff" };
+// products routes
+app.use("/products", productRoutes(pool));
 
-const customizations: { id: number; customColor: string }[] = [];
-
-// GET sofa info
-app.get("/api/sofa", (req, res) => {
-  res.json(sofa);
-});
-
-// POST
-app.post("/api/customizations", (req, res) => {
-  const { customColor } = req.body;
-
-  const newCustomization = {
-    id: customizations.length + 1,
-    customColor,
-  };
-
-  customizations.push(newCustomization);
-
-  res.status(201).json({ message: "Customization added!", data: newCustomization });
-});
-
-// Gett all customs
-app.get("/api/customizations", (req, res) => {
-  res.json(customizations);
-});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

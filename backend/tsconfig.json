@@ -1,11 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES6",
+    "moduleResolution": "node",
     "module": "ESNext",
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
     "outDir": "./dist",
     "rootDir": "./src",
     "types": ["node", "mocha"]
