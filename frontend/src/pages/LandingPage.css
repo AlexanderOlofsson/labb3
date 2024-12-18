@@ -1,0 +1,19 @@
+.landing-page {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.content {
+  z-index: 1;
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  position: relative;
+}

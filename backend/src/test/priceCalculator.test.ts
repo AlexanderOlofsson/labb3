@@ -1,3 +1,5 @@
+// OLD TEST NOT BEING USED
+
 import { expect } from "chai";
 import { calculateTotalPrice } from "../utils/priceCalculator";
 

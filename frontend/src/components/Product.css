@@ -1,68 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.product-header {
+ flex-direction: column;
+ text-align: left;
+}
+
+.main-title {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1;
+  animation: titleAnimation 3s ease-in-out infinite;
+}
+
+.main-subtitle {
+  font-family: "Bonheur Royale", serif;
+  font-size: 3rem;
+  color: #ddd;
+  margin-top: 10px;
+  font-weight: 400;
+}
+@keyframes titleAnimation {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.8;
+  }
+}
+
+
 .product-container {
-  text-align: center;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 0;
+  height: 100vh;
 }
 
-.product-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.product-description {
-  margin-bottom: 15px;
-}
-
-.product-price {
-  font-weight: bold;
-  margin-bottom: 20px;
+.product-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .model-viewer-wrapper {
-  margin-top: 20px;
+  width: 550px;
+  height: 500px;
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-radius: 10px 0 0 10px;
 }
 
-.color-picker-wrapper {
-  margin-top: 20px;
+.product-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex: 1;
+  padding: 0;
+  margin-left: 0;
+}
+
+.product-info {
+  text-align: left;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 520px;
+}
+
+.product-title {
+  font-size: 38px;
+  font-family: "Fira Sans Condensed", serif;
+  font-weight: bold;
+  color: #333;
+}
+
+.product-subtitle {
+  font-family: "Bonheur Royale", serif;
+  font-size: 42px;
+  line-height: 0;
+  font-weight: normal;
+  color: #666;
+}
+
+.product-description,
+.product-price {
+  margin: 10px 0;
+  color: #666;
 }
 
 .color-picker-title {
-  font-size: 1.2rem;
+  font-size: 20px;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: #666;
+  text-align: left;
 }
 
 .color-button {
+  border: none;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid #ccc;
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
-}
-
-.color-button:hover {
-  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  border: 2px solid #ddd;
+  margin-right: 10px;
 }
 
 .color-button.selected {
-  border: 2px solid black;
+  transform: scale(1.2);
+  border-color: #333;
 }
 
-.out-of-stock {
+.color-picker-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.product-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
-  color: red;
-  font-weight: bold;
+  width: 100%;
 }
 
+
+
+.product-price {
+  text-align:right;
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  width: 50%;
+}
+/* check https://codepen.io/kay8/pen/azKbjN */
 .notify-me-button {
+  position: relative;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
+  background-color: #f3f3f3;
+  color: #333;
   border: none;
+  border-left: 4px solid #00cfae;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  width: 50%;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1 !important;
+}
+
+.notify-me-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00cfae;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.notify-me-button:hover::before {
+  transform: scaleX(1);
 }
 
 .notify-me-button:hover {
-  background-color: #0056b3;
+  color: #f3f3f3;
+}
+
+.notify-me-button span {
+  position: relative;
+  z-index: 2;
+}
+
+.swal2-confirm {
+  background-color: #00cfae;
 }

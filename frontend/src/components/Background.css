@@ -1,0 +1,82 @@
+html {
+  background: rgb(12, 12, 12);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.background-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+}
+
+.circle {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  border-radius: 50%;
+  animation: rotate 10s infinite linear;
+  right: -1000px;
+  top: 1000px;
+}
+
+.circle:nth-child(1) {
+  background: #00bfae;
+  animation-duration: 12s;
+}
+
+.circle:nth-child(2) {
+  background: #00dcbf;
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+
+.circle:nth-child(3) {
+  background: #00a78d;
+  animation-duration: 18s;
+  animation-delay: 4s;
+}
+
+.circle:nth-child(4) {
+  background: #00cfae;
+  animation-duration: 20s;
+  animation-delay: 6s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* This is not really a wave anymore haha */
+.wave {
+  position: absolute;
+  left: 0;
+  width: 15%;
+  height: 100%;
+  background: #00bfae;
+  clip-path: polygon(0 30%, 100% 20%, 100% 80%, 0 90%);
+  animation: waveMotion 8s ease-in-out infinite;
+}
+
+@keyframes waveMotion {
+  0% {
+    transform: translateY(-40px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-40px);
+  }
+}

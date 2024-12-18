@@ -26,6 +26,7 @@ describe('Product Component', () => {
         price: 1300
       }
     ]).as('getProducts');
+    cy.viewport(1400, 1000);
     cy.visit('/');
   });
 // https://docs.cypress.io/app/core-concepts/best-practices (data-id)
