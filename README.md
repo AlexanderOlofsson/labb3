@@ -64,16 +64,16 @@ Skapa en PostgreSQL-databas och använd tabellerna från filen database.sql i ba
 
 Skapa en .env-fil i backend-mappen, exempelvis:
 
-DB_USER=din_användare
-DB_PASSWORD=ditt_lösenord
-DB_HOST=localhost
-DB_PORT=5432
-DB_DATABASE=din_databas
+DATABASE_URL=postgresql://postgres:database@localhost:5432/postgres
+PORT=5000
 
 eller:
 
-DATABASE_URL=postgresql://postgres:database@localhost:5432/postgres
-PORT=5000
+DB_USER=din_användare
+DB_PASSWORD=ditt_lösenord
+DB_HOST=localhost
+DB_PORT=5000
+DB_DATABASE=din_databas
 
 ## Starta backend
 
