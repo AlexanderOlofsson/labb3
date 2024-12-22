@@ -13,6 +13,10 @@
     "sweetalert2": "^11.15.0",
     "three": "^0.171.0"
   },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false
+  },
+  "type": "module",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -38,7 +42,14 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@badeball/cypress-cucumber-preprocessor": "^21.0.3",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
+    "@cypress/react18": "^2.0.1",
+    "@cypress/webpack-dev-server": "^3.11.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/cypress": "^1.1.6",
@@ -56,7 +67,10 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.1.0",
     "jest": "^27.5.1",
-    "web-vitals": "^4.2.4"
+    "ts-loader": "^9.5.1",
+    "web-vitals": "^4.2.4",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^6.0.1"
   },
   "description": "Plan is decided. I will learn how to use three js to make a product that is customizable.",
   "main": "index.js",

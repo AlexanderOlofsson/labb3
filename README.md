@@ -1,3 +1,23 @@
+## FEEDBACK UPDATE
+
+Efter feedbacken:
+
+"\* jag vill ha ett BDD test som vi gått igenom med cucumber. Alltså en .feature fil (kravspecen) och en .ts fil (test-implementation)."
+
+Så skapade jag ett liknande test som jag redan hade och använde mig utav fast med hjälp av cucumber genom att använda mig utav en .feature fil och .ts fil.
+
+Varför cucumber inte fanns med i början utan jag skrev endast manuellt given, when osv är att det inte stod som krav på ithsdistans.se
+
+Jag skapade tester (vissa tester används inte längre) först och sedan implementerade jag kod så att testerna gick igenom, simpelt exempel:
+
+https://github.com/AlexanderOlofsson/labb3/commit/e1237a82554c6c80f6d45e79764a4bbe1c238f81
+
+https://github.com/AlexanderOlofsson/labb3/commit/4537a887ba4eab3afb7408230e5df4619aa1f5c3
+
+Alla krav är nu uppfyllda. Jag satsar på godkänt.
+
+## Projektet
+
 Enclaire Product Showcase
 
 En fullstack-applikation och fiktivt case byggd med TypeScript, React, Express, och PostgreSQL som låter användare visa upp en 3D-produkt, välja färger och skriva upp sitt mail för väntan på att produkten ska finnas i lager.
@@ -20,11 +40,11 @@ All kod är skriven med TypeScript (ingen JavaScript/JSX).
 
 TDD (Testdriven utveckling): Tester skrevs först, sedan implementerades koden.
 
-BDD med Given-When-Then: Funktionalitet som verifierar användarflöden.
+BDD (cucumber) med Given-When-Then: Funktionalitet som verifierar användarflöden.
 
 E2E-Test.
 
-UML-diagram: Databasens tabeller och relation.
+UML-diagram: Databasens tabeller och relation. (Finns i rotmappen)
 
 Vissa DRY-principer har följts för kodoptimering.
 
